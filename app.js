@@ -9,8 +9,18 @@ app.use(express.static("./public"));
 
 app.get('/', function(request,response){
     response.render('about')
-    response.render('contact.ejs')
+});
 
+app.get('/project', function(request,response){
+    response.render('project')
+});
+
+app.get('/xp', function(request,response){
+    response.render('xp')
+});
+
+app.get('/contact', function(request,response){
+    response.render('contact')
 });
 
 app.listen(3000,
